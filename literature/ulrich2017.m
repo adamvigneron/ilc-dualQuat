@@ -238,19 +238,19 @@ for j = 1:N  % iteration loop
     disp( ['Iteration ' num2str(j,'%02i') ': posErr3D = ' num2str(posErr3D) ] );
 
     % plot trajectory on existing figure
-    figure(fig1);
+    set(groot,'CurrentFigure',fig1);
     plot( x(2,:), x(3,:) );
 
     % plot y-control on existing figure
-    figure(fig2);
+    set(groot,'CurrentFigure',fig2);
     plot( t, u(2,:));
 
     % plot z-control on existing figure
-    figure(fig3);
+    set(groot,'CurrentFigure',fig3);
     plot( t, u(3,:));
 
     % plot z-details on existing figure
-    figure(fig4);
+    set(groot,'CurrentFigure',fig4);
     subplot(1,3,1); plot(t,u0);
     subplot(1,3,2); plot(t,uP);
     subplot(1,3,3); plot(t,uD);
